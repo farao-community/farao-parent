@@ -1,4 +1,4 @@
-# farao-bom
+# farao-parent
 
 Set of useful POM files to start FARAO related projects either libraries or applications.
 
