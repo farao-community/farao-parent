@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/farao-app-bom/farao-app-bom.iml" filepath="$PROJECT_DIR$/farao-app-bom/farao-app-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/farao-app-parent/farao-app-parent.iml" filepath="$PROJECT_DIR$/farao-app-parent/farao-app-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/farao-bom.iml" filepath="$PROJECT_DIR$/.idea/farao-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/farao-lib-parent/farao-lib-parent.iml" filepath="$PROJECT_DIR$/farao-lib-parent/farao-lib-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/powsybl-bom/powsybl-bom.iml" filepath="$PROJECT_DIR$/powsybl-bom/powsybl-bom.iml" />
+    </modules>
+  </component>
+</project>
