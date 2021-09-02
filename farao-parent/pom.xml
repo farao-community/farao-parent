@@ -24,51 +24,6 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <name>Sebastien MURGEY</name>
-            <email>sebastien.murgey@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
-            <name>Baptiste SEGUINOT</name>
-            <email>baptiste.seguinot@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
-            <name>Viktor TERRIER</name>
-            <email>viktor.terrier@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
-            <name>Alexandre MONTIGNY</name>
-            <email>alexandre.montigny@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
-            <name>Philippe EDWARDS</name>
-            <email>philippe.edwards@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
-            <name>Joris MANCINI</name>
-            <email>joris.mancini@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
-            <name>Peter MITRI</name>
-            <email>peter.mitri@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-    </developers>
-
     <modules>
         <module>farao-parent-ws</module>
     </modules>
