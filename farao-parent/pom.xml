@@ -15,14 +15,6 @@
 
     <name>FARAO parent POM</name>
     <description>Basic POM parent for FARAO projects</description>
-    <url>http://www.farao-community.com</url>
-
-    <licenses>
-        <license>
-            <name>Mozilla Public License, Version 2.0</name>
-            <url>https://www.mozilla.org/en-US/MPL/2.0/</url>
-        </license>
-    </licenses>
 
     <developers>
         <developer>
