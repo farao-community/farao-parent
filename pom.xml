@@ -11,6 +11,14 @@
 
     <name>FARAO BOM</name>
     <description>Main pom file to define lib versions of FARAO related projects -- business and technical.</description>
+    <url>http://www.farao-community.com</url>
+
+    <licenses>
+        <license>
+            <name>Mozilla Public License, Version 2.0</name>
+            <url>https://www.mozilla.org/en-US/MPL/2.0/</url>
+        </license>
+    </licenses>
 
     <modules>
         <module>powsybl-bom</module>
