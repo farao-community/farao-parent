@@ -20,6 +20,57 @@
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:https://github.com/farao-community/farao-parent.git</connection>
+        <developerConnection>scm:git:https://github.com/farao-community/farao-parent.git</developerConnection>
+        <url>https://github.com/farao-community/farao-parent.git</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Sebastien MURGEY</name>
+            <email>sebastien.murgey@rte-france.com</email>
+            <organization>RTE</organization>
+            <organizationUrl>http://www.rte-france.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Baptiste SEGUINOT</name>
+            <email>baptiste.seguinot@rte-france.com</email>
+            <organization>RTE</organization>
+            <organizationUrl>http://www.rte-france.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Viktor TERRIER</name>
+            <email>viktor.terrier@rte-france.com</email>
+            <organization>RTE</organization>
+            <organizationUrl>http://www.rte-france.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Alexandre MONTIGNY</name>
+            <email>alexandre.montigny@rte-france.com</email>
+            <organization>RTE</organization>
+            <organizationUrl>http://www.rte-france.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Philippe EDWARDS</name>
+            <email>philippe.edwards@rte-france.com</email>
+            <organization>RTE</organization>
+            <organizationUrl>http://www.rte-france.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Joris MANCINI</name>
+            <email>joris.mancini@rte-france.com</email>
+            <organization>RTE</organization>
+            <organizationUrl>http://www.rte-france.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Peter MITRI</name>
+            <email>peter.mitri@rte-france.com</email>
+            <organization>RTE</organization>
+            <organizationUrl>http://www.rte-france.com</organizationUrl>
+        </developer>
+    </developers>
+
     <modules>
         <module>powsybl-bom</module>
         <module>farao-bom</module>
