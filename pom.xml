@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.farao-community.farao</groupId>
-    <artifactId>farao-bom</artifactId>
+    <artifactId>farao</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -14,9 +14,8 @@
 
     <modules>
         <module>powsybl-bom</module>
-        <module>farao-app-bom</module>
-        <module>farao-app-parent</module>
-        <module>farao-lib-parent</module>
+        <module>farao-bom</module>
+        <module>farao-parent</module>
     </modules>
 
     <properties>
