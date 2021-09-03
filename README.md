@@ -24,7 +24,7 @@ And for web service application you can use as a parent POM :
 ```
 It inherits from farao-parent so it will embed the same modules. In addition it uses spring-boot-dependencies-bom in version 5.6.3. Then the main use case will be to build spring boot application in FARAO context. 
 
-Additionally two BOMs are defined: powsybl-bom and farao-bom. It defines versions for respectively PowSyBl and FARAO modules. They can be used additionally FARAO to parent POM to use harmonized versions for these modules.
+Additionally two BOMs are defined: powsybl-bom and farao-bom. It defines versions for respectively PowSyBl and FARAO modules. FARAO BOM includes PowSyBl BOM.
 
 ```
 <dependency>
