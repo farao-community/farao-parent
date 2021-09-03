@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.farao-community.farao</groupId>
         <artifactId>farao</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>1.0.6</version>
     </parent>
 
     <artifactId>farao-bom</artifactId>
@@ -47,6 +47,11 @@
                 <groupId>com.farao-community.farao</groupId>
                 <artifactId>farao-crac-io-json</artifactId>
                 <version>${farao.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.farao-community.farao</groupId>
+                <artifactId>farao-dichotomy</artifactId>
+                <version>${farao.dichotomy.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.farao-community.farao</groupId>
@@ -112,7 +117,7 @@
             <dependency>
                 <groupId>com.farao-community.farao</groupId>
                 <artifactId>powsybl-bom</artifactId>
-                <version>1.1.0-SNAPSHOT</version>
+                <version>1.0.6</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
