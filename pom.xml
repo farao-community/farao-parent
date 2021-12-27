@@ -101,6 +101,7 @@
         <minio.version>7.1.0</minio.version>
         <springboot.dependencies.version>2.3.6.RELEASE</springboot.dependencies.version>
         <springfox.version>2.9.2</springfox.version>
+        <logstash.version>4.9</logstash.version>
     </properties>
 
     <build>
