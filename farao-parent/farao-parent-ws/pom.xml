@@ -38,6 +38,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Compile dependencies -->
             <dependency>
                 <groupId>io.minio</groupId>
                 <artifactId>minio</artifactId>
@@ -54,6 +55,7 @@
                 <version>${springfox.version}</version>
             </dependency>
 
+            <!-- Import dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -61,6 +63,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
