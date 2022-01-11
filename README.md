@@ -22,4 +22,4 @@ And for web service application you can use as a parent POM :
     <version>${farao.parent.version}</version>
 </parent>
 ```
-It inherits from farao-parent so it will embed the same modules. In addition it uses spring-boot-dependencies-bom. Then the main use case will be to build spring boot application in FARAO context. 
+It inherits from farao-parent so it will embed the same modules. In addition it imports spring-boot-dependencies and spring-cloud-dependencies. Then the main use case will be to build spring boot application in FARAO context. 
