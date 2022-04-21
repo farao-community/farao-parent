@@ -7,7 +7,7 @@
     <groupId>com.farao-community.farao</groupId>
     <artifactId>farao-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.4.0-SNAPSHOT</version>
+    <version>1.5.0-SNAPSHOT</version>
 
     <name>FARAO parent POM</name>
     <description>Basic POM parent for FARAO projects.</description>
@@ -92,8 +92,8 @@
         <junit.jupiter.version>RELEASE</junit.jupiter.version>
         <minio.version>8.2.2</minio.version>
         <slf4j.version>1.7.32</slf4j.version>
-        <springboot.dependencies.version>2.6.2</springboot.dependencies.version>
-        <springcloud.dependencies.version>2021.0.0</springcloud.dependencies.version>
+        <springboot.dependencies.version>2.6.6</springboot.dependencies.version>
+        <springcloud.dependencies.version>2021.0.1</springcloud.dependencies.version>
         <springfox.version>2.9.2</springfox.version>
     </properties>
 
