@@ -23,3 +23,9 @@ And for web service application you can use as a parent POM :
 </parent>
 ```
 It inherits from farao-parent so it will embed the same modules. In addition it imports spring-boot-dependencies and spring-cloud-dependencies. Then the main use case will be to build spring boot application in FARAO context. 
+
+To release farao-parent project you must use the maven command manually :
+```
+mvn clean package -Prelease deploy
+```
+And validate on sonatype.
