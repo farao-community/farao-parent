@@ -13,7 +13,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref_name, 'hotfix')
+    if: github.ref == 'refs/heads/master' || startsWith(github.ref_name, 'hotfix')
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
         run: mvn --batch-mode -Pdefault,coverage clean install
 
       - name: Build and publish Docker image
-        uses: elgohr/Publish-Docker-Github-Action@main
+        uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: farao/farao-parent
           username: farao
