@@ -89,6 +89,7 @@
         <maven.source.version>3.3.0</maven.source.version>
 
         <!-- Technical dependencies version -->
+        <commons.lang.version>3.13.0</commons.lang.version>
         <junit.jupiter.version>RELEASE</junit.jupiter.version>
         <minio.version>8.2.2</minio.version>
         <slf4j.version>1.7.32</slf4j.version>
@@ -304,6 +305,11 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
