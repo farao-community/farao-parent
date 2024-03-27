@@ -95,7 +95,6 @@
         <slf4j.version>2.0.12</slf4j.version>
         <springboot.dependencies.version>3.2.3</springboot.dependencies.version>
         <springcloud.dependencies.version>2023.0.0</springcloud.dependencies.version>
-        <springfox.version>2.9.2</springfox.version>
 
         <sonar.organization>farao-community</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
