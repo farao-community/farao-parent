@@ -29,6 +29,9 @@
                             </goals>
                         </execution>
                     </executions>
+                    <configuration>
+                        <includeTools>true</includeTools>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
