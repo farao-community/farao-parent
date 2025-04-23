@@ -212,6 +212,13 @@
         </pluginManagement>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </distributionManagement>
+
     <profiles>
         <profile>
             <id>default</id>
