@@ -82,7 +82,6 @@
 
         <sonar.organization>farao-community</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <maven-deploy-plugin.version>3.1.2</maven-deploy-plugin.version>
     </properties>
 
     <build>
@@ -206,7 +205,6 @@
                     <configuration>
                         <publishingServerId>central</publishingServerId>
                         <autoPublish>true</autoPublish>
-                        <waitUntil>published</waitUntil>
                     </configuration>
                 </plugin>
             </plugins>
