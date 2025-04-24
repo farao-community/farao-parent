@@ -24,10 +24,13 @@ jobs:
           java-version: 21
           distribution: 'temurin'
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
-          gpg-passphrase: MAVEN_GPG_PASSPHRASE
+          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           server-id: central
           server-username: ${{ secrets.NEXUS_USERNAME }}
           server-password: ${{ secrets.NEXUS_PASSWORD }}
+
+      - name: Debug settings.xml
+        run: cat ~/.m2/settings.xml
 
       - name: Change Maven version to release version
         run: mvn --batch-mode versions:set -DgenerateBackupPoms=false -DnewVersion=${{ github.event.inputs.releaseVersion }}
