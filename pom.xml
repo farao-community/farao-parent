@@ -82,6 +82,7 @@
 
         <sonar.organization>farao-community</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <maven-deploy-plugin.version>3.1.2</maven-deploy-plugin.version>
     </properties>
 
     <build>
@@ -196,6 +197,24 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surefire.version}</version>
                 </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.maven.plugins</groupId>-->
+<!--                    <artifactId>maven-deploy-plugin</artifactId>-->
+<!--                    <version>${maven-deploy-plugin.version}</version>-->
+<!--                    <executions>-->
+<!--                        <execution>-->
+<!--                            <id>default-deploy</id>-->
+<!--                            <phase>deploy</phase>-->
+<!--                            <goals>-->
+<!--                                <goal>deploy</goal>-->
+<!--                            </goals>-->
+<!--                            <configuration>-->
+<!--                                <skip>true</skip>-->
+<!--                            </configuration>-->
+<!--                        </execution>-->
+<!--                    </executions>-->
+<!--                </plugin>-->
+
                 <plugin>
                     <groupId>org.sonatype.central</groupId>
                     <artifactId>central-publishing-maven-plugin</artifactId>
@@ -267,6 +286,10 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
             </build>
