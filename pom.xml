@@ -7,7 +7,7 @@
     <groupId>com.farao-community.farao</groupId>
     <artifactId>farao-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.12.0-SNAPSHOT</version>
+    <version>1.13.0-SNAPSHOT</version>
 
     <name>FARAO parent POM</name>
     <description>Basic POM parent for FARAO projects.</description>
@@ -34,32 +34,14 @@
             <organizationUrl>http://www.rte-france.com</organizationUrl>
         </developer>
         <developer>
-            <name>Baptiste SEGUINOT</name>
-            <email>baptiste.seguinot@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
             <name>Viktor TERRIER</name>
             <email>viktor.terrier@rte-france.com</email>
             <organization>RTE</organization>
             <organizationUrl>http://www.rte-france.com</organizationUrl>
         </developer>
         <developer>
-            <name>Alexandre MONTIGNY</name>
-            <email>alexandre.montigny@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
             <name>Philippe EDWARDS</name>
             <email>philippe.edwards@rte-france.com</email>
-            <organization>RTE</organization>
-            <organizationUrl>http://www.rte-france.com</organizationUrl>
-        </developer>
-        <developer>
-            <name>Joris MANCINI</name>
-            <email>joris.mancini@rte-france.com</email>
             <organization>RTE</organization>
             <organizationUrl>http://www.rte-france.com</organizationUrl>
         </developer>
@@ -87,6 +69,7 @@
         <maven.javadoc.version>3.6.2</maven.javadoc.version>
         <maven.surefire.version>3.2.2</maven.surefire.version>
         <maven.source.version>3.3.0</maven.source.version>
+        <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
 
         <!-- Technical dependencies version -->
         <commons.lang.version>3.13.0</commons.lang.version>
@@ -213,20 +196,20 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surefire.version}</version>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.sonatype.central</groupId>
+                    <artifactId>central-publishing-maven-plugin</artifactId>
+                    <version>${central-publishing-maven-plugin.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <publishingServerId>central</publishingServerId>
+                        <autoPublish>true</autoPublish>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
     <profiles>
         <profile>
@@ -283,6 +266,10 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
             </build>
