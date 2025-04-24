@@ -54,7 +54,7 @@ jobs:
           tagging_message: v${{ github.event.inputs.releaseVersion }}
 
       - name: Release Maven package
-        run: mvn --batch-mode -Pdefault,release deploy -DskipTests -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }}
+        run: mvn --batch-mode -Pdefault,release deploy -DskipTests -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} -X
 
       - name: Re-build with Maven to avoid multiple .jar achives
         run: mvn --batch-mode -Pdefault,coverage clean install -DskipTests
