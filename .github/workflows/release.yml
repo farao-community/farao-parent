@@ -35,15 +35,15 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode -Pdefault,coverage install
 
-#      - name: Run SonarCloud analysis
-#        run: >
-#          mvn --batch-mode -DskipTests sonar:sonar
-#          -Dsonar.host.url=https://sonarcloud.io
-#          -Dsonar.organization=farao-community
-#          -Dsonar.projectKey=farao-community_farao-parent
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Run SonarCloud analysis
+        run: >
+          mvn --batch-mode -DskipTests sonar:sonar
+          -Dsonar.host.url=https://sonarcloud.io
+          -Dsonar.organization=farao-community
+          -Dsonar.projectKey=farao-community_farao-parent
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Commit and tag release version
         uses: stefanzweifel/git-auto-commit-action@master
@@ -60,32 +60,32 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
-#      - name: Re-build with Maven to avoid multiple .jar achives
-#        run: mvn --batch-mode -Pdefault,coverage clean install -DskipTests
+      - name: Re-build with Maven to avoid multiple .jar achives
+        run: mvn --batch-mode -Pdefault,coverage clean install -DskipTests
 
-#      - name: Change Maven version to next version
-#        run: mvn --batch-mode versions:set -DgenerateBackupPoms=false -DnewVersion=${{ github.event.inputs.nextVersion }}-SNAPSHOT
-#
-#      - name: Commit next version
-#        uses: stefanzweifel/git-auto-commit-action@master
-#        with:
-#          branch: next-release-v${{ github.event.inputs.nextVersion }}
-#          create_branch: true
-#          commit_message: Prepare next release ${{ github.event.inputs.nextVersion }}
-#          skip_fetch: true
-#          skip_checkout: true
-#
-#      - name: Merge automatically into source branch
-#        uses: devmasx/merge-branch@master
-#        with:
-#          type: now
-#          from_branch: next-release-v${{ github.event.inputs.nextVersion }}
-#          target_branch: ${{ github.ref_name }}
-#          message: Automatic merge after release ${{ github.event.inputs.releaseVersion }}
-#          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-#
-#      - name: Delete merged branch
-#        uses: dawidd6/action-delete-branch@v3
-#        with:
-#          github_token: ${{ secrets.GITHUB_TOKEN }}
-#          branches: next-release-v${{ github.event.inputs.nextVersion }}
+      - name: Change Maven version to next version
+        run: mvn --batch-mode versions:set -DgenerateBackupPoms=false -DnewVersion=${{ github.event.inputs.nextVersion }}-SNAPSHOT
+
+      - name: Commit next version
+        uses: stefanzweifel/git-auto-commit-action@master
+        with:
+          branch: next-release-v${{ github.event.inputs.nextVersion }}
+          create_branch: true
+          commit_message: Prepare next release ${{ github.event.inputs.nextVersion }}
+          skip_fetch: true
+          skip_checkout: true
+
+      - name: Merge automatically into source branch
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: next-release-v${{ github.event.inputs.nextVersion }}
+          target_branch: ${{ github.ref_name }}
+          message: Automatic merge after release ${{ github.event.inputs.releaseVersion }}
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+
+      - name: Delete merged branch
+        uses: dawidd6/action-delete-branch@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branches: next-release-v${{ github.event.inputs.nextVersion }}

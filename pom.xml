@@ -205,9 +205,8 @@
                     <extensions>true</extensions>
                     <configuration>
                         <publishingServerId>central</publishingServerId>
-                        <!-- TODO test this, setting it to true should allow to skip the portal validation step-->
-<!--                        <autoPublish>true</autoPublish>-->
-<!--                        <waitUntil>published</waitUntil>-->
+                        <autoPublish>true</autoPublish>
+                        <waitUntil>published</waitUntil>
                     </configuration>
                 </plugin>
             </plugins>
