@@ -26,8 +26,8 @@ jobs:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           server-id: central
-          server-username: ${{ secrets.NEXUS_USERNAME }}
-          server-password: ${{ secrets.NEXUS_PASSWORD }}
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
 
       - name: Change Maven version to release version
         run: mvn --batch-mode versions:set -DgenerateBackupPoms=false -DnewVersion=${{ github.event.inputs.releaseVersion }}
@@ -35,15 +35,15 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode -Pdefault,coverage install
 
-      - name: Run SonarCloud analysis
-        run: >
-          mvn --batch-mode -DskipTests sonar:sonar
-          -Dsonar.host.url=https://sonarcloud.io
-          -Dsonar.organization=farao-community
-          -Dsonar.projectKey=farao-community_farao-parent
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#      - name: Run SonarCloud analysis
+#        run: >
+#          mvn --batch-mode -DskipTests sonar:sonar
+#          -Dsonar.host.url=https://sonarcloud.io
+#          -Dsonar.organization=farao-community
+#          -Dsonar.projectKey=farao-community_farao-parent
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Commit and tag release version
         uses: stefanzweifel/git-auto-commit-action@master
@@ -55,6 +55,9 @@ jobs:
 
       - name: Release Maven package
         run: mvn --batch-mode -Pdefault,release deploy -DskipTests -X
+        env:
+          MAVEN_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
 
       - name: Re-build with Maven to avoid multiple .jar achives
         run: mvn --batch-mode -Pdefault,coverage clean install -DskipTests
