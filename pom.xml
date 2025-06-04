@@ -77,8 +77,8 @@
         <logstash.version>7.4</logstash.version>
         <minio.version>8.2.2</minio.version>
         <slf4j.version>2.0.12</slf4j.version>
-        <springboot.dependencies.version>3.3.6</springboot.dependencies.version>
-        <springcloud.dependencies.version>2023.0.4</springcloud.dependencies.version>
+        <springboot.dependencies.version>3.4.6</springboot.dependencies.version>
+        <springcloud.dependencies.version>2024.0.1</springcloud.dependencies.version>
 
         <sonar.organization>farao-community</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
