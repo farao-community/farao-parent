@@ -72,13 +72,13 @@
         <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
 
         <!-- Technical dependencies version -->
-        <commons.lang.version>3.13.0</commons.lang.version>
+        <commons.lang.version>3.18.0</commons.lang.version>
         <junit.jupiter.version>5.11.3</junit.jupiter.version>
-        <logstash.version>7.4</logstash.version>
-        <minio.version>8.2.2</minio.version>
+        <logstash.version>8.1</logstash.version>
+        <minio.version>8.6.0</minio.version>
         <slf4j.version>2.0.12</slf4j.version>
-        <springboot.dependencies.version>3.4.6</springboot.dependencies.version>
-        <springcloud.dependencies.version>2024.0.1</springcloud.dependencies.version>
+        <springboot.dependencies.version>3.4.12</springboot.dependencies.version>
+        <springcloud.dependencies.version>2024.0.2</springcloud.dependencies.version>
 
         <sonar.organization>farao-community</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
